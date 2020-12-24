@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,28 +6,107 @@
 
 body {
   background-color: #f7fff7;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-family: "Muli", sans-serif;
   height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .container {
-  margin-top: 150px;
-  padding: 50px 250px;
-  border-radius: 50px;
+  max-width: 100%;
+}
+
+.header-container {
+  display: relative;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  border-radius: 50%;
+  top: -10px;
+  left: 25px;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: rgb(38, 57, 77) 0px 15px 15px -10px;
 }
 
 .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #343434;
   font-size: 50px;
-  position: absolute;
-  top: 0;
 }
 
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 48px;
+}
+
+.fa-instagram {
+  color: #343434;
+  transition: 0.3s ease-out;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.fa-instagram:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 3;
+  padding-bottom: 200px;
+}
+
+.link {
+  margin: 10px;
+  padding: 2px 12px;
+  max-width: 350px;
+  width: 100%;
+  text-decoration: 0;
+  color: #343434;
+  font-size: 20px;
+  border: solid #343434 2px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.3s ease;
+  transform: translateX(400%);
+}
+
+.link:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.link.show {
+  transform: translateX(0);
+}
+
+.link:hover {
+  transform: scale(1.05) translateY(-5px);
+  border: solid rgba(52, 52, 52, 1) 2px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+/* 
 .link {
   display: block;
   margin: 1.5rem;
@@ -38,9 +117,9 @@ body {
   padding: 10px;
   font-size: 20px;
   box-shadow: 5px 5px 5px 0 #343434;
-}
+} */
 
-.link:hover {
+/* .link:hover {
   transform: scale(0.98);
 }
 
@@ -48,4 +127,4 @@ body {
   color: #f7fff7;
   background-color: #343434;
   border-color: #f7fff7;
-}
+} */
