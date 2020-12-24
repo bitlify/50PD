@@ -86,15 +86,14 @@ body {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: 0.3s ease;
-  transform: translateX(400%);
-}
-
-.link:nth-of-type(even) {
-  transform: translateX(-400%);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .link.show {
-  transform: translateX(0);
+  animation: fadeInFromNone 0.3s ease;
+  opacity: 1;
+  visibility: visible;
 }
 
 .link:hover {
